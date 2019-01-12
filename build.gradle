@@ -39,10 +39,6 @@ idea {
   }
 }
 
-bootJar {
-  mainClassName = "org.syaku.Application"
-}
-
 repositories {
   jcenter()
   mavenCentral()
@@ -92,6 +88,7 @@ asciidoctor {
 }
 
 bootJar {
+  mainClassName = "org.syaku.Application"
   dependsOn asciidoctor
   from ("${asciidoctor.outputDir}/html5") {
     into 'static/docs'
